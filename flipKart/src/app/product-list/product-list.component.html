@@ -1,0 +1,11 @@
+<div class="flipKart-product-container">
+    <img [src]="product.pImage" height="230px" width="130px">
+    <p>Name:{{ product.name }}</p>
+    <p>Price:${{product.price}}</p>
+    <p>Color:{{product.color}}</p>
+    <p>Discounted-price:{{getDiscountedPrice()}}</p>
+    <p>{{product.inStock>0 ? 'Only ' + product.inStock +' items left':'not in stock'}}</p>
+    <button (click)="decrementCartValue()">-</button>
+    <span>{{ addToCart }}</span>
+    <button (click)="increment()">+</button>
+</div>
