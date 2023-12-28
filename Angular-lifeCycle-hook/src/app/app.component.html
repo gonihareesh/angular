@@ -1,0 +1,9 @@
+<div class="container">
+  <input type="text" #inputEl (focus)="0"/>
+  <button (click)="onButtonChange(inputEl)">Submit</button>
+  <app-demo [message]="inputVal" *ngIf="destroy">
+    <p #temp>User has entered following text: {{inputVal}}</p>
+  </app-demo>
+  <br><br>
+  <button (click)="destroyComponent()">Show/Hide</button>
+</div>
